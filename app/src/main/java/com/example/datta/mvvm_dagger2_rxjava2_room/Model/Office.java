@@ -6,7 +6,7 @@ import javax.inject.Inject;
 
 public class Office {
 
-    String TAG="officeTag";
+    String TAG = "officeTag";
     Employee employee;
 
     Finance finance;
@@ -17,14 +17,19 @@ public class Office {
         this.finance = finance;
     }
 
-   public void doSomeOfficeWork() {
+    public void doSomeOfficeWork() {
 
         if (employee != null && finance != null) {
 
             Log.e(TAG, "Office work started..");
 
         }
+    }
 
+    @Inject
+    public void giveSalary() {
+
+        Log.e(TAG, "Salary process started...");
 
     }
 
